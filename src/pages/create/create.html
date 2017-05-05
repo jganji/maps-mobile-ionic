@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-navbar color="secondary">
+    <ion-title>
+      Create Student
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-list inset [hidden]="submitted">
+    <form #studentForm='ngForm' (ngSubmit)="onSubmit()">
+      <ion-item>
+        <ion-label floating>Student Name</ion-label>
+        <ion-input type="text" id="name" [(ngModel)]="model.name" name="name" required #name="ngModel"></ion-input>
+      </ion-item>
+      <ion-item [hidden]="name.valid || name.pristine" >
+        <p color="danger">Please enter a valid name.</p>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Student Class</ion-label>
+        <ion-input type="number" id="studentclass" [(ngModel)]="model.studentclass" name="studentclass" required #studentclass="ngModel"></ion-input>
+
+      </ion-item>
+      <ion-item [hidden]="name.valid || name.pristine" >
+        <p color="danger">Please enter a valid Class.</p>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Student Address</ion-label>
+        <ion-textarea type="text" id="address" [(ngModel)]="model.address" name="address"></ion-textarea>
+      </ion-item>
+
+      <button ion-button color="twitter" name="add" [disabled]="!studentForm.form.valid">Add</button>
+      <button ion-button color="twitter" name="reset">Cancel</button>
+    </form>
+  </ion-list>
+  <h1 [hidden]="!submitted">You submitted the following:</h1>
+  <ion-list inset [hidden]="!submitted">
+    <ion-item>
+      <h3>Student Name: {{model.name}}</h3>
+    </ion-item>
+    <ion-item>
+      <h3>Student Class: {{model.studentclass}}</h3>
+    </ion-item>
+    <ion-item>
+      <h3>Student Address: {{model.address}}</h3>
+    </ion-item>
+
+  </ion-list>
+</ion-content>
