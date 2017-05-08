@@ -14,7 +14,7 @@ Follow these instructions to install the app and run it:
 
 1. Clone the repository:
     ```
-    git clone https://github.com/lssinc/lighthouse-lab/tree/master/ionic-map-leaflet
+    git clone https://github.com/jganji/maps-mobile-ionic
     ```
 
 1. Navigate to the `maps-mobile-ionic` directory :
