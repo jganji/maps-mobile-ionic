@@ -1,3 +1,4 @@
+# maps-mobile-ionic
 # Ionic Map Leaflet
 
 Ionic Map Leaflet is a sample application that demonstrates how to build mobile app with Ionic using leaflet mapping API. 
@@ -17,10 +18,15 @@ Follow these instructions to install the app and run it:
     git clone https://github.com/lssinc/lighthouse-lab/tree/master/ionic-map-leaflet
     ```
 
-1. Navigate to the `maps-mobile-ionic` directory :
+1. Navigate to the `ionic-map-leaflet` directory :
     ```
-    cd maps-mobile-ionic
+    cd ionic-map-leaflet
     ```
+1. install leaflet and its typings 
+   ```
+   npm install leaflet --save 
+   npm install @types/leaflet --save
+  
   
  1. Install the dependencies
      ```
